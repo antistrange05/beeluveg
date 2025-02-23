@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script>
+        function checkPassword() {
+            var password = document.getElementById("password").value;
+            var correctPassword = "yourPassword"; // Change this to your desired password
+
+            if (password === correctPassword) {
+                window.location.href = "index.html"; // Redirect to index.html if correct
+            } else {
+                alert("Incorrect password. Please try again.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Please Log In</h2>
+    <label for="password">Enter Password:</label>
+    <input type="password" id="password" required>
+    <button onclick="checkPassword()">Submit</button>
+</body>
+</html>
