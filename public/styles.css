@@ -9,8 +9,15 @@ body {
 h1 {
     color: #d63384;
 }
+
+.spotify-embed {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
 .heart-button {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     background-color: #ff4d6d;
@@ -25,9 +32,16 @@ h1 {
     color: white;
     font-weight: bold;
     text-align: center;
-    z-index: 1;
-    overflow: hidden;
+    line-height: 1;
 }
+.button-container {
+    display: flex;
+    justify-content: center; /* Centers buttons horizontally */
+    align-items: center; /* Centers buttons vertically */
+    gap: 50px; /* Space between buttons */
+    height: 100vh; /* Full height of the viewport */
+}
+
 
 .heart-button::before,
 .heart-button::after {
@@ -37,7 +51,6 @@ h1 {
     background-color: #ff4d6d;
     border-radius: 50%;
     position: absolute;
-    z-index: -1; /* Move the pseudo-elements behind the text */
 }
 
 .heart-button::before {
@@ -50,12 +63,13 @@ h1 {
     top: 0;
 }
 
-/* Ensure text inside the button is properly rotated */
+/* Text styling inside the heart */
 .heart-button span {
-    transform: rotate(45deg);
-    position: relative;
-    z-index: 2;
+    transform: rotate(45deg); /* Rotate text back to normal */
+    position: absolute;
+    z-index: 2; /* Ensure text is above the heart */
 }
+
 
 imgH {
     width: 300px; /* Adjust width */
@@ -68,7 +82,8 @@ imgH {
 .gallery {
     display: grid;
     grid-template-columns: repeat(5, 1fr); /* Limit to 5 cards per row */
-    gap: 20px; /* Space between images */
+    gap: 30px; /* Space between images */
+    row-gap: 100px;
     justify-items: center;
     padding: 20px;
 }
