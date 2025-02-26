@@ -9,13 +9,12 @@ body {
 h1 {
     color: #d63384;
 }
+button {
+    margin-top: auto;
+    margin-bottom: 20px;
+}
 
-.spotify-embed {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-  }
+
 .heart-button {
     display: flex;
     align-items: center;
@@ -40,6 +39,12 @@ h1 {
     align-items: center; /* Centers buttons vertically */
     gap: 50px; /* Space between buttons */
     height: 100vh; /* Full height of the viewport */
+    margin-top: -250px; /* Adjust this value as needed */
+}
+.centered-div {
+    text-align: center; /* Center text inside the div */
+    margin: 0 auto; /* Center the div itself */
+    width: fit-content; /* Adjust width to fit content, or set a specific width */
 }
 
 
